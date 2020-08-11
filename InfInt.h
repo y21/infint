@@ -44,12 +44,15 @@
 //#include <limits.h>
 //#include <stdlib.h>
 
-#ifdef _WIN32
+#ifndef LONG_LONG_MIN
 #define LONG_LONG_MIN LLONG_MIN
+#endif
+#ifndef LONG_LONG_MAX
 #define LONG_LONG_MAX LLONG_MAX
+#endif
+#ifndef ULONG_LONG_MAX
 #define ULONG_LONG_MAX ULLONG_MAX
 #endif
-
 #ifdef INFINT_USE_EXCEPTIONS
 #include <exception>
 #endif
